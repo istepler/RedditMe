@@ -25,6 +25,10 @@ class AuthorizationService: AuthorizationServiceProtocol {
         ]
     }
     
+    init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAuth), name: .authNotification, object: nil)
+    }
+    
     private var authUrl: URL? {
         var queryItems: [URLQueryItem] = []
         for (key, value) in params {
@@ -39,4 +43,10 @@ class AuthorizationService: AuthorizationServiceProtocol {
         guard let url = authUrl else { return }
         UIApplication.shared.open(url)
     }
+    
+    @objc private func didRecieveAuth(notification: Notification) {
+        print(notification)
+    }
+    
+    
 }
