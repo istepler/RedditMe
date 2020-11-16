@@ -11,6 +11,8 @@ class TopEntriesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private let viewModel: TopEntriesViewModelProtocol = TopEntriesViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self

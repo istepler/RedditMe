@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352DF6172562FA3A001CEB81 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF6162562FA3A001CEB81 /* AuthorizationService.swift */; };
+		352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61925630688001CEB81 /* Notification+Extensions.swift */; };
 		3534FB2A255DDE5A00E95ECB /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534FB29255DDE5A00E95ECB /* EntryTableViewCell.swift */; };
 		35CAC955255DD0F8000ABE84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAC954255DD0F8000ABE84 /* AppDelegate.swift */; };
 		35CAC959255DD0F8000ABE84 /* TopEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAC958255DD0F8000ABE84 /* TopEntriesViewController.swift */; };
 		35CAC95C255DD0F8000ABE84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CAC95A255DD0F8000ABE84 /* Main.storyboard */; };
 		35CAC95E255DD0F9000ABE84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CAC95D255DD0F9000ABE84 /* Assets.xcassets */; };
 		35CAC961255DD0F9000ABE84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CAC95F255DD0F9000ABE84 /* LaunchScreen.storyboard */; };
-		35CAC96B255DD3BF000ABE84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAC96A255DD3BF000ABE84 /* SceneDelegate.swift */; };
+		35EE3535255DE67600C8B5A0 /* TopEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE3534255DE67600C8B5A0 /* TopEntriesViewModel.swift */; };
+		35EE3538255DE93300C8B5A0 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE3537255DE93300C8B5A0 /* Entry.swift */; };
+		35EE353B255DEA2600C8B5A0 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE353A255DEA2600C8B5A0 /* Media.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		352DF6162562FA3A001CEB81 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		352DF61925630688001CEB81 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		3534FB29255DDE5A00E95ECB /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		35CAC951255DD0F8000ABE84 /* RedditMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAC954255DD0F8000ABE84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +31,9 @@
 		35CAC95D255DD0F9000ABE84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35CAC960255DD0F9000ABE84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35CAC962255DD0F9000ABE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35CAC96A255DD3BF000ABE84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		35EE3534255DE67600C8B5A0 /* TopEntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntriesViewModel.swift; sourceTree = "<group>"; };
+		35EE3537255DE93300C8B5A0 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		35EE353A255DEA2600C8B5A0 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352DF6152562F9E8001CEB81 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				352DF6162562FA3A001CEB81 /* AuthorizationService.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		3534FB27255DDDFF00E95ECB /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +73,7 @@
 		3534FB2C255DDE6800E95ECB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				352DF61925630688001CEB81 /* Notification+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -83,9 +100,9 @@
 				35CAC96E255DD58A000ABE84 /* TopEntries */,
 				35CAC96F255DD5A4000ABE84 /* Models */,
 				3534FB27255DDDFF00E95ECB /* ApiClient */,
+				352DF6152562F9E8001CEB81 /* Authorization */,
 				3534FB2C255DDE6800E95ECB /* Extensions */,
 				35CAC954255DD0F8000ABE84 /* AppDelegate.swift */,
-				35CAC96A255DD3BF000ABE84 /* SceneDelegate.swift */,
 				35CAC95A255DD0F8000ABE84 /* Main.storyboard */,
 				35CAC95D255DD0F9000ABE84 /* Assets.xcassets */,
 				35CAC95F255DD0F9000ABE84 /* LaunchScreen.storyboard */,
@@ -98,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				35CAC958255DD0F8000ABE84 /* TopEntriesViewController.swift */,
+				35EE3534255DE67600C8B5A0 /* TopEntriesViewModel.swift */,
 				3534FB28255DDE1C00E95ECB /* Components */,
 			);
 			path = TopEntries;
@@ -106,6 +124,8 @@
 		35CAC96F255DD5A4000ABE84 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				35EE3537255DE93300C8B5A0 /* Entry.swift */,
+				35EE353A255DEA2600C8B5A0 /* Media.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,10 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EE3538255DE93300C8B5A0 /* Entry.swift in Sources */,
+				35EE3535255DE67600C8B5A0 /* TopEntriesViewModel.swift in Sources */,
+				35EE353B255DEA2600C8B5A0 /* Media.swift in Sources */,
 				3534FB2A255DDE5A00E95ECB /* EntryTableViewCell.swift in Sources */,
 				35CAC959255DD0F8000ABE84 /* TopEntriesViewController.swift in Sources */,
 				35CAC955255DD0F8000ABE84 /* AppDelegate.swift in Sources */,
-				35CAC96B255DD3BF000ABE84 /* SceneDelegate.swift in Sources */,
+				352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */,
+				352DF6172562FA3A001CEB81 /* AuthorizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
