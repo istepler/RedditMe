@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		352DF6172562FA3A001CEB81 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF6162562FA3A001CEB81 /* AuthorizationService.swift */; };
 		352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61925630688001CEB81 /* Notification+Extensions.swift */; };
+		352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61F25632A74001CEB81 /* URL+Extensions.swift */; };
+		352DF62325632DA6001CEB81 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF62225632DA6001CEB81 /* APIClient.swift */; };
+		352DF62625633135001CEB81 /* Codable+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF62525633135001CEB81 /* Codable+Extentions.swift */; };
+		352DF62F256347AE001CEB81 /* TokenRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF62E256347AE001CEB81 /* TokenRequestModel.swift */; };
+		352DF6322563506F001CEB81 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF6312563506F001CEB81 /* Token.swift */; };
 		3534FB2A255DDE5A00E95ECB /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534FB29255DDE5A00E95ECB /* EntryTableViewCell.swift */; };
 		35CAC955255DD0F8000ABE84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAC954255DD0F8000ABE84 /* AppDelegate.swift */; };
 		35CAC959255DD0F8000ABE84 /* TopEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAC958255DD0F8000ABE84 /* TopEntriesViewController.swift */; };
@@ -23,6 +28,11 @@
 /* Begin PBXFileReference section */
 		352DF6162562FA3A001CEB81 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		352DF61925630688001CEB81 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		352DF61F25632A74001CEB81 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		352DF62225632DA6001CEB81 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		352DF62525633135001CEB81 /* Codable+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extentions.swift"; sourceTree = "<group>"; };
+		352DF62E256347AE001CEB81 /* TokenRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequestModel.swift; sourceTree = "<group>"; };
+		352DF6312563506F001CEB81 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		3534FB29255DDE5A00E95ECB /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		35CAC951255DD0F8000ABE84 /* RedditMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAC954255DD0F8000ABE84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +65,26 @@
 			path = Authorization;
 			sourceTree = "<group>";
 		};
+		352DF62825634370001CEB81 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				352DF62E256347AE001CEB81 /* TokenRequestModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		352DF63425635B06001CEB81 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3534FB27255DDDFF00E95ECB /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				352DF62225632DA6001CEB81 /* APIClient.swift */,
+				352DF62825634370001CEB81 /* Models */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -74,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				352DF61925630688001CEB81 /* Notification+Extensions.swift */,
+				352DF61F25632A74001CEB81 /* URL+Extensions.swift */,
+				352DF62525633135001CEB81 /* Codable+Extentions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -101,6 +130,7 @@
 				35CAC96F255DD5A4000ABE84 /* Models */,
 				3534FB27255DDDFF00E95ECB /* ApiClient */,
 				352DF6152562F9E8001CEB81 /* Authorization */,
+				352DF63425635B06001CEB81 /* New Group */,
 				3534FB2C255DDE6800E95ECB /* Extensions */,
 				35CAC954255DD0F8000ABE84 /* AppDelegate.swift */,
 				35CAC95A255DD0F8000ABE84 /* Main.storyboard */,
@@ -126,6 +156,7 @@
 			children = (
 				35EE3537255DE93300C8B5A0 /* Entry.swift */,
 				35EE353A255DEA2600C8B5A0 /* Media.swift */,
+				352DF6312563506F001CEB81 /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,12 +232,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EE3538255DE93300C8B5A0 /* Entry.swift in Sources */,
+				352DF62F256347AE001CEB81 /* TokenRequestModel.swift in Sources */,
 				35EE3535255DE67600C8B5A0 /* TopEntriesViewModel.swift in Sources */,
 				35EE353B255DEA2600C8B5A0 /* Media.swift in Sources */,
+				352DF62325632DA6001CEB81 /* APIClient.swift in Sources */,
 				3534FB2A255DDE5A00E95ECB /* EntryTableViewCell.swift in Sources */,
+				352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */,
 				35CAC959255DD0F8000ABE84 /* TopEntriesViewController.swift in Sources */,
 				35CAC955255DD0F8000ABE84 /* AppDelegate.swift in Sources */,
+				352DF62625633135001CEB81 /* Codable+Extentions.swift in Sources */,
 				352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */,
+				352DF6322563506F001CEB81 /* Token.swift in Sources */,
 				352DF6172562FA3A001CEB81 /* AuthorizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

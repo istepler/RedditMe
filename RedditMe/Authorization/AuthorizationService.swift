@@ -14,16 +14,21 @@ protocol AuthorizationServiceProtocol {
 
 class AuthorizationService: AuthorizationServiceProtocol {
     
+    private var clientId = "o_OfexqtmVEr2Q"
+    private var redirectUri = "com.istepler.RedditMe://auth"
+    
     private var params: [String : String] {
         return [
-            "client_id" : "o_OfexqtmVEr2Q",
+            "client_id" : clientId,
             "response_type" : "code",
             "state" : "somerandomstring",
             "duration" : "permanent",
             "scope" : "read",
-            "redirect_uri" : "com.istepler.RedditMe://auth"
+            "redirect_uri" : redirectUri
         ]
     }
+    
+    private let apiClient = APICLient()
     
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAuth), name: .authNotification, object: nil)
@@ -45,8 +50,16 @@ class AuthorizationService: AuthorizationServiceProtocol {
     }
     
     @objc private func didRecieveAuth(notification: Notification) {
-        print(notification)
+        guard let authURL = notification.object as? URL, let code = authURL.queryParameters?["code"] else {
+            print("Authentification failed")
+            return
+        }
+        getToken(for: clientId, model: TokenRequestModel(code: code, redirectUri: redirectUri))
     }
     
-    
+    private func getToken(for client: String, model: TokenRequestModel) {
+        apiClient.execute(requestType: .topEntries, response: TokenModel.self) { (response, error) in
+            print(response)
+        }
+    }
 }
