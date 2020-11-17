@@ -18,6 +18,11 @@ class TopEntriesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        StartViewController.present(in: self)
+    }
 }
 
 extension TopEntriesViewController: UITableViewDelegate, UITableViewDataSource {

@@ -43,7 +43,7 @@ enum CustomError: Error {
     case generalError
 }
 
-class APICLient {
+class APIClient {
     
     private var session: URLSession!
     
@@ -81,7 +81,7 @@ class APICLient {
             authorizationHeader = "Bearer"
         }
         request.addValue(authorizationHeader, forHTTPHeaderField: "Authorization")
-        execute(request: request) { (data, error) in
+        perform(request: request) { (data, error) in
             do {
                 completion(try JSONDecoder().decode(T.self, from: data ?? Data()), error)
             } catch {
@@ -90,7 +90,7 @@ class APICLient {
         }
     }
     
-    private func execute(request: URLRequest, completion: @escaping (Data?,Error?) -> Void) {
+    private func perform(request: URLRequest, completion: @escaping (Data?,Error?) -> Void) {
         let task = session.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 completion(data, error)

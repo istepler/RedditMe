@@ -14,6 +14,7 @@
 		352DF62625633135001CEB81 /* Codable+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF62525633135001CEB81 /* Codable+Extentions.swift */; };
 		352DF62F256347AE001CEB81 /* TokenRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF62E256347AE001CEB81 /* TokenRequestModel.swift */; };
 		352DF6322563506F001CEB81 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF6312563506F001CEB81 /* Token.swift */; };
+		352DF63B2563658E001CEB81 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF63A2563658E001CEB81 /* StartViewController.swift */; };
 		3534FB2A255DDE5A00E95ECB /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3534FB29255DDE5A00E95ECB /* EntryTableViewCell.swift */; };
 		35CAC955255DD0F8000ABE84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAC954255DD0F8000ABE84 /* AppDelegate.swift */; };
 		35CAC959255DD0F8000ABE84 /* TopEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CAC958255DD0F8000ABE84 /* TopEntriesViewController.swift */; };
@@ -33,6 +34,7 @@
 		352DF62525633135001CEB81 /* Codable+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extentions.swift"; sourceTree = "<group>"; };
 		352DF62E256347AE001CEB81 /* TokenRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequestModel.swift; sourceTree = "<group>"; };
 		352DF6312563506F001CEB81 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		352DF63A2563658E001CEB81 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3534FB29255DDE5A00E95ECB /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		35CAC951255DD0F8000ABE84 /* RedditMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CAC954255DD0F8000ABE84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,13 +73,6 @@
 				352DF62E256347AE001CEB81 /* TokenRequestModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		352DF63425635B06001CEB81 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		3534FB27255DDDFF00E95ECB /* ApiClient */ = {
@@ -126,11 +121,11 @@
 		35CAC953255DD0F8000ABE84 /* RedditMe */ = {
 			isa = PBXGroup;
 			children = (
+				352DF63A2563658E001CEB81 /* StartViewController.swift */,
 				35CAC96E255DD58A000ABE84 /* TopEntries */,
 				35CAC96F255DD5A4000ABE84 /* Models */,
 				3534FB27255DDDFF00E95ECB /* ApiClient */,
 				352DF6152562F9E8001CEB81 /* Authorization */,
-				352DF63425635B06001CEB81 /* New Group */,
 				3534FB2C255DDE6800E95ECB /* Extensions */,
 				35CAC954255DD0F8000ABE84 /* AppDelegate.swift */,
 				35CAC95A255DD0F8000ABE84 /* Main.storyboard */,
@@ -232,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EE3538255DE93300C8B5A0 /* Entry.swift in Sources */,
+				352DF63B2563658E001CEB81 /* StartViewController.swift in Sources */,
 				352DF62F256347AE001CEB81 /* TokenRequestModel.swift in Sources */,
 				35EE3535255DE67600C8B5A0 /* TopEntriesViewModel.swift in Sources */,
 				35EE353B255DEA2600C8B5A0 /* Media.swift in Sources */,

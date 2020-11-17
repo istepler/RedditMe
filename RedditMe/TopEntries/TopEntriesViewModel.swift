@@ -14,6 +14,5 @@ class TopEntriesViewModel: TopEntriesViewModelProtocol {
     private let authorizationService: AuthorizationServiceProtocol
     init(authorizationService: AuthorizationServiceProtocol = AuthorizationService()) {
         self.authorizationService = authorizationService
-        authorizationService.start()
     }
 }

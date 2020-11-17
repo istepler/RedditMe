@@ -28,7 +28,7 @@ class AuthorizationService: AuthorizationServiceProtocol {
         ]
     }
     
-    private let apiClient = APICLient()
+    private let apiClient = APIClient()
     
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAuth), name: .authNotification, object: nil)
