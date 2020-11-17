@@ -125,7 +125,7 @@
                                 <rect key="frame" x="107" y="373" width="200" height="150"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Pi7-AV-9ID"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Pi7-AV-9ID"/>
                                     <constraint firstAttribute="height" constant="150" id="fFL-9i-4kT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>

@@ -59,15 +59,8 @@ class APIClient {
         response: T.Type,
         completion: @escaping (T?, Error?) -> Void
     ) {
-        guard let url = URL(string: requestType.path) else { return }
-        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        if let params = params?.asDictionary() {
-            components?.queryItems = []
-            for (key, value) in params {
-                components?.queryItems?.append(URLQueryItem(name: key, value: "\(value)"))
-            }
-        }
-        var request = URLRequest(url: components?.url ?? url)
+        guard let fullUrl = requestType.path.asURLWithComponents(params: params?.asDictionary()) else { return }
+        var request = URLRequest(url: fullUrl)
         request.httpMethod = requestType.method.rawValue
         var authorizationHeader = ""
         switch requestType {

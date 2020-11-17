@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351C6254256477FA00119A5B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C6253256477FA00119A5B /* String+Extensions.swift */; };
+		351C62582564788100119A5B /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C62572564788100119A5B /* TokenStorage.swift */; };
 		352DF6172562FA3A001CEB81 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF6162562FA3A001CEB81 /* AuthorizationService.swift */; };
 		352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61925630688001CEB81 /* Notification+Extensions.swift */; };
 		352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61F25632A74001CEB81 /* URL+Extensions.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		351C6253256477FA00119A5B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		351C62572564788100119A5B /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		352DF6162562FA3A001CEB81 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		352DF61925630688001CEB81 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		352DF61F25632A74001CEB81 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -59,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		351C62562564786600119A5B /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				351C62572564788100119A5B /* TokenStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		352DF6152562F9E8001CEB81 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +110,7 @@
 				352DF61925630688001CEB81 /* Notification+Extensions.swift */,
 				352DF61F25632A74001CEB81 /* URL+Extensions.swift */,
 				352DF62525633135001CEB81 /* Codable+Extentions.swift */,
+				351C6253256477FA00119A5B /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -126,6 +139,7 @@
 				35CAC96F255DD5A4000ABE84 /* Models */,
 				3534FB27255DDDFF00E95ECB /* ApiClient */,
 				352DF6152562F9E8001CEB81 /* Authorization */,
+				351C62562564786600119A5B /* Storage */,
 				3534FB2C255DDE6800E95ECB /* Extensions */,
 				35CAC954255DD0F8000ABE84 /* AppDelegate.swift */,
 				35CAC95A255DD0F8000ABE84 /* Main.storyboard */,
@@ -229,6 +243,7 @@
 				35EE3538255DE93300C8B5A0 /* Entry.swift in Sources */,
 				352DF63B2563658E001CEB81 /* StartViewController.swift in Sources */,
 				352DF62F256347AE001CEB81 /* TokenRequestModel.swift in Sources */,
+				351C62582564788100119A5B /* TokenStorage.swift in Sources */,
 				35EE3535255DE67600C8B5A0 /* TopEntriesViewModel.swift in Sources */,
 				35EE353B255DEA2600C8B5A0 /* Media.swift in Sources */,
 				352DF62325632DA6001CEB81 /* APIClient.swift in Sources */,
@@ -236,6 +251,7 @@
 				352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */,
 				35CAC959255DD0F8000ABE84 /* TopEntriesViewController.swift in Sources */,
 				35CAC955255DD0F8000ABE84 /* AppDelegate.swift in Sources */,
+				351C6254256477FA00119A5B /* String+Extensions.swift in Sources */,
 				352DF62625633135001CEB81 /* Codable+Extentions.swift in Sources */,
 				352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */,
 				352DF6322563506F001CEB81 /* Token.swift in Sources */,

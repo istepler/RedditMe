@@ -14,8 +14,9 @@ protocol AuthorizationServiceProtocol {
 
 class AuthorizationService: AuthorizationServiceProtocol {
     
-    private var clientId = "o_OfexqtmVEr2Q"
-    private var redirectUri = "com.istepler.RedditMe://auth"
+    private let clientId = "o_OfexqtmVEr2Q"
+    private let redirectUri = "com.istepler.RedditMe://auth"
+    private let authURLString = "https://www.reddit.com/api/v1/authorize.compact"
     
     private var params: [String : String] {
         return [
@@ -35,13 +36,7 @@ class AuthorizationService: AuthorizationServiceProtocol {
     }
     
     private var authUrl: URL? {
-        var queryItems: [URLQueryItem] = []
-        for (key, value) in params {
-            queryItems.append(URLQueryItem(name: key, value: value))
-        }
-        var components = URLComponents(string: "https://www.reddit.com/api/v1/authorize.compact")
-        components?.queryItems = queryItems
-        return components?.url
+        return authURLString.asURLWithComponents(params: params)
     }
     
     func start() {
@@ -58,8 +53,13 @@ class AuthorizationService: AuthorizationServiceProtocol {
     }
     
     private func getToken(for client: String, model: TokenRequestModel) {
-        apiClient.execute(requestType: .token(clientId: clientId, body: model), response: TokenModel.self) { (response, error) in
-            print(response)
+        apiClient.execute(requestType: .token(clientId: clientId, body: model), response: TokenModel.self) { (tokenData, error) in
+            guard let token = tokenData?.accessToken else {
+                print("Authentification failed")
+                return
+            }
+            print(token)
         }
     }
+    
 }
