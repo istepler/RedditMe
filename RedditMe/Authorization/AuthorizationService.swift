@@ -58,7 +58,7 @@ class AuthorizationService: AuthorizationServiceProtocol {
     }
     
     private func getToken(for client: String, model: TokenRequestModel) {
-        apiClient.execute(requestType: .topEntries, response: TokenModel.self) { (response, error) in
+        apiClient.execute(requestType: .token(clientId: clientId, body: model), response: TokenModel.self) { (response, error) in
             print(response)
         }
     }

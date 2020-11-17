@@ -59,7 +59,7 @@ class APICLient {
         response: T.Type,
         completion: @escaping (T?, Error?) -> Void
     ) {
-        let url = URL(string: requestType.path)!
+        guard let url = URL(string: requestType.path) else { return }
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
         if let params = params?.asDictionary() {
             components?.queryItems = []
