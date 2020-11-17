@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol AuthorizationServiceProtocol {
+protocol AuthorizationServiceProtocol: class {
     func start() 
 }
 
@@ -58,7 +58,7 @@ class AuthorizationService: AuthorizationServiceProtocol {
                 print("Authentification failed")
                 return
             }
-            print(token)
+            TokenStorage.shared.accessToken = token
         }
     }
     

@@ -33,7 +33,7 @@ extension RequestType {
         case .token:
             return "https://www.reddit.com/api/v1/access_token"
         default:
-            return ""
+            return "http://oauth.reddit.com/top/.json"
         }
     }
     
@@ -54,7 +54,6 @@ class APIClient {
     
     func execute<T:Codable>(
         requestType: RequestType,
-        body: Codable? = nil,
         params: Codable? = nil,
         response: T.Type,
         completion: @escaping (T?, Error?) -> Void
@@ -70,8 +69,8 @@ class APIClient {
             authorizationHeader = "Basic \(encodedString)"
             request.httpBody = body.urlEncoded
         default:
-            request.httpBody = body?.encoded()
-            authorizationHeader = "Bearer"
+            guard let token = TokenStorage.shared.accessToken  else { return }
+            authorizationHeader = "Bearer \(token)"
         }
         request.addValue(authorizationHeader, forHTTPHeaderField: "Authorization")
         perform(request: request) { (data, error) in

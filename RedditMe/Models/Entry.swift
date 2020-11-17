@@ -7,11 +7,21 @@
 
 import Foundation
 
-struct EntryModel {}
+struct EntryModel: Codable {
+    let data: EntryDataModel
+}
+
+struct EntryDataModel: Codable {
+    let name: String
+    let title: String
+}
 
 struct Entry {
+    let name: String
     let title: String
-    let authorName: String
-    let date: Date
-    var thumbnailUrl: String?
+    
+    init(_ model: EntryModel) {
+        name = model.data.name
+        title = model.data.title
+    }
 }
