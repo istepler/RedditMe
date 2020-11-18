@@ -8,15 +8,16 @@
 import Foundation
 
 protocol TopEntriesServiceProtocol: class {
-    func fetch(completion: @escaping ([Entry]) -> ())
+    func fetch(after model: EntriesRequestModel, completion: @escaping ([Entry]) -> ())
 }
 
 class TopEntriesService: TopEntriesServiceProtocol {
     
     private let apiClient = APIClient()
     
-    func fetch(completion: @escaping ([Entry]) -> ()) {
+    func fetch(after model: EntriesRequestModel,  completion: @escaping ([Entry]) -> ()) {
         apiClient.execute(requestType: .topEntries,
+                          params: model,
                           response: TopEntriesResponseModel.self) { (response, error) in
             guard let response = response else { return }
             let entries: [Entry] = response.data.children.map { model in

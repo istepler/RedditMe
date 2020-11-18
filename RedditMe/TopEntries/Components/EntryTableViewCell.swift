@@ -15,10 +15,16 @@ class EntryTableViewCell: UITableViewCell {
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thumbnailImageView.image = nil
+    }
+    
     func configure(model: Entry) {
         titleLabel.text = model.title
         authorLabel.text = model.author
         dateLabel.text = model.createdAt
         commentsLabel.text = model.commentsCount
+        thumbnailImageView.setImage(from: model.thumbnailUrl)
     }
 }

@@ -19,5 +19,8 @@ extension String {
         components?.queryItems = queryItems
         return components?.url
     }
-
+    
+    var isURL: Bool {
+        return hasPrefix("http://") || hasPrefix("https://")
+    }
 }

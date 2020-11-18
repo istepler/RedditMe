@@ -12,6 +12,8 @@
 		351C625C2564805700119A5B /* TopEntriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C625B2564805700119A5B /* TopEntriesService.swift */; };
 		351C625F25648B7900119A5B /* TopEntriesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C625E25648B7900119A5B /* TopEntriesResponseModel.swift */; };
 		351C626325649FBF00119A5B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C626225649FBF00119A5B /* Date+Extensions.swift */; };
+		351C62662564A40C00119A5B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C62652564A40C00119A5B /* UIImageView+Extensions.swift */; };
+		351C62692564A99500119A5B /* EntriesRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C62682564A99500119A5B /* EntriesRequestModel.swift */; };
 		352DF6172562FA3A001CEB81 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF6162562FA3A001CEB81 /* AuthorizationService.swift */; };
 		352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61925630688001CEB81 /* Notification+Extensions.swift */; };
 		352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61F25632A74001CEB81 /* URL+Extensions.swift */; };
@@ -36,6 +38,8 @@
 		351C625B2564805700119A5B /* TopEntriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntriesService.swift; sourceTree = "<group>"; };
 		351C625E25648B7900119A5B /* TopEntriesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntriesResponseModel.swift; sourceTree = "<group>"; };
 		351C626225649FBF00119A5B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		351C62652564A40C00119A5B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		351C62682564A99500119A5B /* EntriesRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesRequestModel.swift; sourceTree = "<group>"; };
 		352DF6162562FA3A001CEB81 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		352DF61925630688001CEB81 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		352DF61F25632A74001CEB81 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				352DF62E256347AE001CEB81 /* TokenRequestModel.swift */,
+				351C62682564A99500119A5B /* EntriesRequestModel.swift */,
 				351C625E25648B7900119A5B /* TopEntriesResponseModel.swift */,
 			);
 			path = Models;
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				352DF61925630688001CEB81 /* Notification+Extensions.swift */,
+				351C62652564A40C00119A5B /* UIImageView+Extensions.swift */,
 				351C626225649FBF00119A5B /* Date+Extensions.swift */,
 				352DF61F25632A74001CEB81 /* URL+Extensions.swift */,
 				352DF62525633135001CEB81 /* Codable+Extentions.swift */,
@@ -251,8 +257,10 @@
 				352DF62F256347AE001CEB81 /* TokenRequestModel.swift in Sources */,
 				351C625F25648B7900119A5B /* TopEntriesResponseModel.swift in Sources */,
 				351C62582564788100119A5B /* TokenStorage.swift in Sources */,
+				351C62662564A40C00119A5B /* UIImageView+Extensions.swift in Sources */,
 				351C625C2564805700119A5B /* TopEntriesService.swift in Sources */,
 				35EE3535255DE67600C8B5A0 /* TopEntriesViewModel.swift in Sources */,
+				351C62692564A99500119A5B /* EntriesRequestModel.swift in Sources */,
 				352DF62325632DA6001CEB81 /* APIClient.swift in Sources */,
 				3534FB2A255DDE5A00E95ECB /* EntryTableViewCell.swift in Sources */,
 				352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */,

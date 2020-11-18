@@ -31,7 +31,7 @@ struct Entry {
     let name: String
     let title: String
     let author: String?
-    let thumbnailUrl: String?
+    var thumbnailUrl: URL? = nil
     let createdAt: String?
     let commentsCount: String?
     
@@ -39,8 +39,10 @@ struct Entry {
         name = model.data.name
         title = model.data.title
         author = model.data.author
-        thumbnailUrl = model.data.thumbnailUrl
         createdAt = model.data.createdAt?.toString
         commentsCount = String(model.data.commentsCount ?? 0) + "comments"
+        if let urlString = model.data.thumbnailUrl, urlString.isURL {
+            thumbnailUrl = URL(string: urlString)
+        }
     }
 }

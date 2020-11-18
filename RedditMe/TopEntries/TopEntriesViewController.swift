@@ -48,7 +48,7 @@ extension TopEntriesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EntryTableViewCell.self), for: indexPath) as! EntryTableViewCell
         cell.configure(model: viewModel.entries[indexPath.row])
         if indexPath.row == viewModel.entries.count - 1 {
-            print("Add the conditions and fetch mode ")
+            viewModel.fetch()
         }
         return cell
     }
