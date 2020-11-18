@@ -28,6 +28,9 @@ class TopEntriesViewController: UIViewController {
         viewModel.enter = { [weak self] in
             self?.dismiss(animated: true)
         }
+        viewModel.didUpdate = { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     private func setupView() {
@@ -38,11 +41,15 @@ class TopEntriesViewController: UIViewController {
 
 extension TopEntriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return viewModel.entries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EntryTableViewCell.self), for: indexPath) as! EntryTableViewCell
+        cell.configure(model: viewModel.entries[indexPath.row])
+        if indexPath.row == viewModel.entries.count - 1 {
+            print("Add the conditions and fetch mode ")
+        }
         return cell
     }
     

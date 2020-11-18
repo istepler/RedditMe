@@ -17,7 +17,6 @@ class TopEntriesViewModel: TopEntriesViewModelProtocol {
 
     var entries: [Entry] = [] {
         didSet {
-            print(entries)
             didUpdate?()
         }
     }

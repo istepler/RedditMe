@@ -11,6 +11,7 @@
 		351C62582564788100119A5B /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C62572564788100119A5B /* TokenStorage.swift */; };
 		351C625C2564805700119A5B /* TopEntriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C625B2564805700119A5B /* TopEntriesService.swift */; };
 		351C625F25648B7900119A5B /* TopEntriesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C625E25648B7900119A5B /* TopEntriesResponseModel.swift */; };
+		351C626325649FBF00119A5B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C626225649FBF00119A5B /* Date+Extensions.swift */; };
 		352DF6172562FA3A001CEB81 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF6162562FA3A001CEB81 /* AuthorizationService.swift */; };
 		352DF61A25630688001CEB81 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61925630688001CEB81 /* Notification+Extensions.swift */; };
 		352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352DF61F25632A74001CEB81 /* URL+Extensions.swift */; };
@@ -34,6 +35,7 @@
 		351C62572564788100119A5B /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		351C625B2564805700119A5B /* TopEntriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntriesService.swift; sourceTree = "<group>"; };
 		351C625E25648B7900119A5B /* TopEntriesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntriesResponseModel.swift; sourceTree = "<group>"; };
+		351C626225649FBF00119A5B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		352DF6162562FA3A001CEB81 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		352DF61925630688001CEB81 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		352DF61F25632A74001CEB81 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				352DF61925630688001CEB81 /* Notification+Extensions.swift */,
+				351C626225649FBF00119A5B /* Date+Extensions.swift */,
 				352DF61F25632A74001CEB81 /* URL+Extensions.swift */,
 				352DF62525633135001CEB81 /* Codable+Extentions.swift */,
 				351C6253256477FA00119A5B /* String+Extensions.swift */,
@@ -254,6 +257,7 @@
 				3534FB2A255DDE5A00E95ECB /* EntryTableViewCell.swift in Sources */,
 				352DF62025632A74001CEB81 /* URL+Extensions.swift in Sources */,
 				35CAC959255DD0F8000ABE84 /* TopEntriesViewController.swift in Sources */,
+				351C626325649FBF00119A5B /* Date+Extensions.swift in Sources */,
 				35CAC955255DD0F8000ABE84 /* AppDelegate.swift in Sources */,
 				351C6254256477FA00119A5B /* String+Extensions.swift in Sources */,
 				352DF62625633135001CEB81 /* Codable+Extentions.swift in Sources */,
